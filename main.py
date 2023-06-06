@@ -16,12 +16,15 @@ def run_bot():
 		main_menu(message)
 # обработка выбора "записаться на массаж"
 	@bot.message_handler(func=lambda message: message.text == "Записаться на массаж")
+	def reg(message):
 		register_massage(message)
 # обработка выбора "посмотреть прайс"
 	@bot.message_handler(func=lambda message: message.text == "Посмотреть прайс")
+	def show_price(message):
 		show_pricelist(message)
 # обработка выбора "проверить свободное время"
 	@bot.message_handler(func=lambda message: message.text == "Проверить свободное время")
+	def check_times(message):
 		check_availability(message)
 # запуск бота
 	while True:  # функция для пулинга
@@ -31,9 +34,9 @@ def run_bot():
 			#print('Этого не должно быть')
 			exit()
 			# если досюда дошёл бот, это совершенно нормально. Мы нажали ctrl+c!
-				with open("exit.log", "w", encoding="UTF-8") as f: f.write("exited!")
-			except KeyboardInterrupt:
-				exit() # ctrl+c pressed
+			with open("exit.log", "w", encoding="UTF-8") as f: f.write("exited!")
+		except KeyboardInterrupt:
+			exit() # ctrl+c pressed
 		except telebot.apihelper.ApiException:
 			print('Проверьте связь и API')
 			sleep(10)
