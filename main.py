@@ -5,7 +5,7 @@ from show_price import show_pricelist
 from menu import main_menu
 from check_time import check_availability
 from time import sleep
-from config import Token, doktor_id
+from config import Token
 # инициализация бота
 def run_bot():
 	bot = telebot.TeleBot(Token)
