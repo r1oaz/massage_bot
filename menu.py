@@ -1,4 +1,5 @@
 import telebot
+from main import bot
 def main_menu(message):
 	keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
 	keyboard.add("Записаться на массаж", "Посмотреть прайс", "Проверить свободное время")

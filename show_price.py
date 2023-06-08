@@ -1,5 +1,6 @@
-import telebot
 import openpyxl
+from main import bot
+from menu import main_menu
 def show_pricelist(message):
 	print('показываем прайс')
 	book = openpyxl.load_workbook("прайс.xlsx")
