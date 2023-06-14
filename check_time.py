@@ -1,7 +1,7 @@
 import telebot
 import openpyxl
 from menu import main_menu
-from main import bot
+from bot import  bot
 def check_availability(message):
 	print('проверка свободного времени')
 	bot.send_message(message.chat.id, "Введите дату (в формате ДД.ММ.ГГГГ):")

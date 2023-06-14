@@ -1,5 +1,5 @@
 import openpyxl
-from main import bot
+from bot import bot
 from menu import main_menu
 def show_pricelist(message):
 	print('показываем прайс')

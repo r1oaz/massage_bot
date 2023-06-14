@@ -3,7 +3,7 @@ import openpyxl
 from keyboards import massage_types, yes_no_keyboard, times_keyboard
 from menu import main_menu
 from config import doktor_id
-from main import bot
+from bot import  bot
 def register_massage(message):
 	print('получаем имя')
 	bot.send_message(message.chat.id, "Введите ФИО:")
