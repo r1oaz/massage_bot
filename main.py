@@ -3,7 +3,6 @@ from reg_mas import register_massage
 from show_price import show_pricelist
 from menu import main_menu
 from check_time import check_availability
-from bot import bot
 # инициализация бота
 def run_bot():
 	# обработка команды /start
@@ -26,3 +25,22 @@ def run_bot():
 	def check_times(message):
 		print('старт проверить время')
 		check_availability(message)
+# запуск бота
+	print('starting...')
+	try:
+		bot.polling(none_stop=True, interval=0)
+		#print('Этого не должно быть')
+		exit()
+		# если досюда дошёл бот, это совершенно нормально. Мы нажали ctrl+c!
+		with open("exit.log", "w", encoding="UTF-8") as f: f.write("exited!")
+	except KeyboardInterrupt:
+			exit() # ctrl+c pressed
+	except telebot.apihelper.ApiException:
+		print('Проверьте связь и API')
+		sleep(10)
+	except Exception as e:
+		print(e)
+		sleep(15)
+
+if __name__ == '__main__':
+	run_bot()
