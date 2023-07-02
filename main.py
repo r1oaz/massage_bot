@@ -3,8 +3,12 @@ from reg_mas import register_massage
 from show_price import show_pricelist
 from menu import main_menu
 from check_time import check_availability
+from config import Token
+from time import sleep
 # инициализация бота
 def run_bot():
+	bot = telebot.TeleBot(Token)
+	print('starting...')
 	# обработка команды /start
 	@bot.message_handler(commands=["start"])
 	def start(message):
