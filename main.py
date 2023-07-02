@@ -34,11 +34,6 @@ def run_bot():
 	try:
 		bot.polling(none_stop=True, interval=0)
 		#print('Этого не должно быть')
-		exit()
-		# если досюда дошёл бот, это совершенно нормально. Мы нажали ctrl+c!
-		with open("exit.log", "w", encoding="UTF-8") as f: f.write("exited!")
-	except KeyboardInterrupt:
-			exit() # ctrl+c pressed
 	except telebot.apihelper.ApiException:
 		print('Проверьте связь и API')
 		sleep(10)
