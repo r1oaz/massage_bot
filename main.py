@@ -1,45 +1,67 @@
 import telebot
+from telebot import types
+from price import show_price
 from reg_mas import register_massage
-from show_price import show_pricelist
-from menu import main_menu
-from check_time import check_availability
-from config import Token
-from time import sleep
+from check_time import check_available_time
+from keyboards import main_menu_markup
+from config import bot
+import time
 # инициализация бота
-def run_bot():
-	bot = telebot.TeleBot(Token)
-	print('starting...')
-	# обработка команды /start
-	@bot.message_handler(commands=["start"])
-	def start(message):
-# главное меню
-		main_menu(message)
-# обработка выбора "записаться на массаж"
-	@bot.message_handler(func=lambda message: message.text == "Записаться на массаж")
-	def reg(message):
-		print('старт запись на массаж')
-		register_massage(message)
-# обработка выбора "посмотреть прайс"
-	@bot.message_handler(func=lambda message: message.text == "Посмотреть прайс")
-	def show_price(message):
-		print('старт показать прайс')
-		show_pricelist(message)
-# обработка выбора "проверить свободное время"
-	@bot.message_handler(func=lambda message: message.text == "Проверить свободное время")
-	def check_times(message):
-		print('старт проверить время')
-		check_availability(message)
-# запуск бота
-	print('starting...')
-	try:
-		bot.polling(none_stop=True, interval=0)
-		#print('Этого не должно быть')
-	except telebot.apihelper.ApiException:
-		print('Проверьте связь и API')
-		sleep(10)
-	except Exception as e:
-		print(e)
-		sleep(15)
 
-if __name__ == '__main__':
-	run_bot()
+print('start')
+@bot.message_handler(commands=['start'])
+def handle_start(message):
+    bot.send_message(message.chat.id, "Добро пожаловать! Выберите пункт из меню или напишите /help для справки:", reply_markup=main_menu_markup())
+
+@bot.message_handler(commands=['help'])
+def handle_help(message):
+    bot.send_message(message.chat.id, 'Вопросы, пожелания, предложения, проблемы, можете направить разработчику на почту: r1oaz@yandex.ru')
+    handle_start(message)
+
+@bot.message_handler(func=lambda message: True)
+def handle_message(message):
+    text = message.text.lower()
+    try:
+        if text == 'прайс':
+            show_price(message)
+        elif text == 'записаться':
+            register_massage(message)
+        elif text == 'проверить свободное время':
+            check_available_time(message)
+        else:
+            bot.reply_to(message, "Извините, я не понимаю ваш запрос. Выберите пункт из меню.")
+    except telebot.apihelper.ApiException as e:
+        # Обработка ошибки API Telegram
+        print(f"Ошибка API Telegram: {e}")
+        reconnect()
+
+    except Exception as e:
+        # Обработка других исключений
+        print(f"Ошибка: {e}")
+
+# Функция для переподключения к API Telegram
+def reconnect():
+    while True:
+        try:
+            bot.polling(none_stop=True)
+
+        except Exception as e:
+            # Выводим сообщение об ошибке и ждем перед следующей попыткой подключения
+            print(f"Ошибка при подключении: {e}")
+            print("Повторное подключение через 10 секунд...")
+            time.sleep(10)
+
+# Запускаем бота
+while True:
+    try:
+        bot.polling(none_stop=True)
+
+    except KeyboardInterrupt:
+        print("Остановка бота...")
+        break
+
+    except Exception as e:
+        # Выводим сообщение об ошибке и ждем перед следующей попыткой подключения
+        print(f"Ошибка при подключении: {e}")
+        print("Повторное подключение через 10 секунд...")
+        time.sleep(10)
