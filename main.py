@@ -1,4 +1,5 @@
 import telebot
+import signal
 from telebot import types
 from price import show_price
 from reg_mas import register_massage
@@ -15,8 +16,10 @@ def handle_start(message):
 
 @bot.message_handler(commands=['help'])
 def handle_help(message):
-    bot.send_message(message.chat.id, 'Вопросы, пожелания, предложения, проблемы, можете направить разработчику на почту: r1oaz@yandex.ru')
-    handle_start(message)
+    bot.send_message(message.chat.id, 'Вопросы, пожелания, предложения, проблемы, можете направить разработчику на почту: r1oaz@yandex.ru\n'
+                     f'перед тем, как записываться на массаж, нажмите кнопку "проверить свободное время", иначе, может получиться так, что запишетесь вы и ещё кто-нибудь на одно и то же время\n'
+                     f'спасибо за понимание.',
+    reply_markup=main_menu_markup())
 
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
@@ -51,17 +54,12 @@ def reconnect():
             print("Повторное подключение через 10 секунд...")
             time.sleep(10)
 
+def exit_handler(signal, frame):
+    print("Остановка бота...")
+    bot.stop_polling()
+
+# Устанавливаем обработчик сигнала Ctrl+C
+signal.signal(signal.SIGINT, exit_handler)
+
 # Запускаем бота
-while True:
-    try:
-        bot.polling(none_stop=True)
-
-    except KeyboardInterrupt:
-        print("Остановка бота...")
-        break
-
-    except Exception as e:
-        # Выводим сообщение об ошибке и ждем перед следующей попыткой подключения
-        print(f"Ошибка при подключении: {e}")
-        print("Повторное подключение через 10 секунд...")
-        time.sleep(10)
+bot.polling(none_stop=True)

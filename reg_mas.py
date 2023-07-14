@@ -1,7 +1,7 @@
 import openpyxl
 from telebot import types
 from keyboards import massage_types_markup, time_slots_markup
-from menu import main_menu_markup
+from menu import main_menu
 import datetime
 from config import bot, doktor_id
 def register_massage(message):
@@ -58,8 +58,15 @@ def save_registration(message, fio, phone_number, massage_type, date, time_slot)
         row = [fio, phone_number, massage_type, date, time_slot]
         sheet.append(row)
         wb.save('db.xlsx')
-        bot.send_message(doktor_id, 'записался на массаж:', row)
-        bot.send_message(message.chat.id, "Ваша запись сохранена. Ждем вас на массаж!", reply_markup=main_menu_markup())
+        bot.send_message(doktor_id, "записан на массаж:\n\n"
+                                      f"ФИО: {fio}\n"
+                                      f"Номер телефона: {phone_number}\n"
+                                      f"массаж: {massage_type}\n"
+                                      f"Дата: {date}\n"
+                                      f"Время: {time_slot}")
+        bot.send_message(message.chat.id, "Ваша запись сохранена. Ждем вас на массаж!")
+        main_menu(message)
+
     else:
         register_massage(bot, message)
 
