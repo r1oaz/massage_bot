@@ -5,6 +5,7 @@ from price import show_price
 from reg_mas import register_massage
 from check_time import check_available_time
 from keyboards import main_menu_markup
+from menu import main_menu
 from config import bot
 import time
 # инициализация бота
@@ -18,8 +19,8 @@ def handle_start(message):
 def handle_help(message):
     bot.send_message(message.chat.id, 'Вопросы, пожелания, предложения, проблемы, можете направить разработчику на почту: r1oaz@yandex.ru\n'
                      f'перед тем, как записываться на массаж, нажмите кнопку "проверить свободное время", иначе, может получиться так, что запишетесь вы и ещё кто-нибудь на одно и то же время\n'
-                     f'спасибо за понимание.',
-    reply_markup=main_menu_markup())
+                     f'спасибо за понимание.')
+    main_menu(message)
 
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
