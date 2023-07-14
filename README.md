@@ -6,3 +6,10 @@ telebot
 openPyxl
  
  пока что реализована функция сохранения записей через xlsx файлы excel
+ 
+## добавлен файл requirements.txt
+
+установка всех необходимых компонентов производится командой
+
+pip install -r requirements.txt
+
