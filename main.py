@@ -33,7 +33,7 @@ def handle_message(message):
         elif text == 'проверить свободное время':
             check_available_time(message)
         else:
-            bot.reply_to(message, "Извините, я не понимаю ваш запрос. Выберите пункт из меню.")
+            bot.reply_to(message, "Извините, я не понимаю ваш запрос. Выберите пункт из меню.", reply_markup=main_menu_markup())
     except telebot.apihelper.ApiException as e:
         # Обработка ошибки API Telegram
         print(f"Ошибка API Telegram: {e}")
@@ -47,7 +47,7 @@ def handle_message(message):
 def reconnect():
     while True:
         try:
-            bot.polling(none_stop=True)
+            bot.polling(none_stop=True, timeout=60)
 
         except Exception as e:
             # Выводим сообщение об ошибке и ждем перед следующей попыткой подключения
@@ -63,4 +63,4 @@ def exit_handler(signal, frame):
 signal.signal(signal.SIGINT, exit_handler)
 
 # Запускаем бота
-bot.polling(none_stop=True)
+bot.polling(none_stop=True, timeout=60)

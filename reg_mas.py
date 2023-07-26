@@ -31,7 +31,11 @@ def ask_time(message, fio, phone_number, massage_type):
     # Проверяем введенную дату на корректность и предлагаем выбрать время
     date = message.text
     if check_date_format(date):
-        bot.send_message(message.chat.id, "Выберите время:", reply_markup=time_slots_markup())
+        keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        available_times = get_available_times(date)
+        for time in available_times:
+            keyboard.add(time)
+        bot.send_message(message.chat.id, "Выберите удобное время:", reply_markup=keyboard)
         bot.register_next_step_handler(message, confirm_registration, fio, phone_number, massage_type, date)
     else:
         bot.send_message(message.chat.id, "Некорректный формат даты. Введите дату (в формате дд.мм.гггг):")
@@ -70,6 +74,7 @@ def save_registration(message, fio, phone_number, massage_type, date, time_slot)
     else:
         register_massage(bot, message)
 
+
 def check_date_format(date):
     # Проверяем корректность формата даты
     try:
@@ -77,3 +82,18 @@ def check_date_format(date):
         return True
     except ValueError:
         return False
+
+def get_available_times(date):
+    wb = openpyxl.load_workbook('db.xlsx')
+    sheet = wb.active
+    times = []
+
+    for row in sheet.iter_rows(values_only=True):
+        if row[3] == date:
+            times.append(row[4])
+
+    all_times = ['09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30']
+
+    available_times = [time for time in all_times if time not in times]
+
+    return available_times
