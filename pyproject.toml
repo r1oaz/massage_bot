@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "massage-bot"
+version = "0.1.0"
+description = "бот для записи на массаж"
+authors = ["Ivan Yurjev <r1oaz@vk.com>"]
+readme = "README.md"
+packages = [{include = "massage_bot"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+telebot = "^0.0.5"
+openpyxl = "^3.1.2"
+schedule = "^1.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
