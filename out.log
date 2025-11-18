@@ -1,1 +1,281 @@
-start
+2025-11-18 10:42:18,857 INFO __main__: Бот запущен
+2025-11-18 10:42:18,859 INFO __main__: Запуск polling...
+2025-11-18 10:42:34,315 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Записаться' contact=None
+2025-11-18 10:42:34,316 INFO utils: OUT chat_id=1024281862 text='Введите ФИО:' extras={reply_markup=<telebot.types.ReplyKeyboardRemove object at 0x000001EDD059F830>}
+2025-11-18 10:42:47,544 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Василенко Андрей иванович' contact=None
+2025-11-18 10:42:47,545 INFO utils: OUT chat_id=1024281862 text='Пожалуйста, отправьте свой номер телефона кнопкой ниже или введите его вручную:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001EDD05ADA00>}
+2025-11-18 10:42:56,042 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='89027041329' contact=None
+2025-11-18 10:42:56,067 INFO utils: OUT chat_id=1024281862 text='Выберите тип массажа:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001EDD05A5430>}
+2025-11-18 10:43:02,801 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Массаж шеи (1 ед)' contact=None
+2025-11-18 10:43:02,803 INFO utils: OUT chat_id=1024281862 text='Выберите дату:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001EDD05B8800>}
+2025-11-18 10:43:24,840 INFO utils: Чтение db.xlsx для поиска занятых времён на дату=18.11.2025
+2025-11-18 10:43:24,857 INFO utils: Найдено забронированных времён для 18.11.2025: 0
+2025-11-18 10:43:24,857 INFO utils: OUT chat_id=1024281862 text='Выберите время:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001EDD0595D00>}
+2025-11-18 10:43:32,925 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='11:30' contact=None
+2025-11-18 10:43:32,926 INFO utils: OUT chat_id=1024281862 text='Подтвердите запись:\n\nФИО: Василенко Андрей иванович\nНомер телефона: 89027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 11:30' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001EDD05B8C50>}
+2025-11-18 10:43:41,965 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Да' contact=None
+2025-11-18 10:43:41,970 INFO reg_mas: Запись в db.xlsx: chat_id=1024281862 fio=Василенко Андрей иванович phone=89027041329 type=Массаж шеи (1 ед) date=18.11.2025 time=11:30
+2025-11-18 10:43:42,002 INFO utils: OUT chat_id=1024281862 text="Новая запись на массаж:\n\nПациент: <a href='tg://user?id=1024281862'>Василенко Андрей иванович</a>\nНомер телефона: 89027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 11:30" extras={parse_mode=HTML}
+2025-11-18 10:43:42,198 INFO utils: OUT chat_id=1024281862 text='Запись сохранена. Ждем вас!' extras={reply_markup=<telebot.types.ReplyKeyboardRemove object at 0x000001EDCF9F6930>}
+2025-11-18 10:43:42,339 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 10:43:42,354 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 10:43:42,354 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001EDD059D310>}
+2025-11-18 10:43:57,487 INFO utils: OUT chat_id=1024281862 text='Что вы хотите сделать?' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001EDD05AE150>}
+2025-11-18 10:44:03,347 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Перенести запись' contact=None
+2025-11-18 10:44:03,348 INFO utils: OUT chat_id=1024281862 text='Выберите новую дату:' extras={reply_markup=<telebot.types.ReplyKeyboardRemove object at 0x000001EDCD89E6F0>}
+2025-11-18 10:45:07,626 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='18.11.2025' contact=None
+2025-11-18 10:45:07,633 INFO utils: OUT chat_id=1024281862 text='Выберите дату:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001EDD06AC560>}
+2025-11-18 10:45:16,966 INFO utils: Чтение db.xlsx для поиска занятых времён на дату=18.11.2025
+2025-11-18 10:45:16,972 INFO utils: Найдено забронированных времён для 18.11.2025: 1
+2025-11-18 10:45:16,972 INFO utils: OUT chat_id=1024281862 text='Выберите время:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001EDD075D790>}
+2025-11-18 10:45:23,497 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='12:00' contact=None
+2025-11-18 10:45:23,503 INFO utils: OUT chat_id=1024281862 text='DEBUG: найдена запись row=2 fio=васильев Андрей димович phone=79027041329 date=03.11.2025 time=09:00' extras={}
+2025-11-18 10:45:24,214 INFO reminders: Попытка перенести запись chat_id=1024281862 09:00 None -> 18.11.2025 12:00
+2025-11-18 10:45:24,218 INFO reminders: Найдена строка 2 для chat_id=1024281862: old_date=03.11.2025 old_time=09:00
+2025-11-18 10:45:24,241 INFO reminders: Обновление выполнено: row=2 new_date=18.11.2025 new_time=12:00
+2025-11-18 10:45:24,241 INFO reminders: Перенос успешно выполнен для chat_id=1024281862
+2025-11-18 10:45:24,260 INFO utils: OUT chat_id=1024281862 text='Ваша запись перенесена.' extras={}
+2025-11-18 10:45:24,520 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 10:45:24,522 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 10:45:24,522 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001EDD07A6150>}
+2025-11-18 10:46:18,836 INFO __main__: Остановка бота (Ctrl+C)...
+2025-11-18 10:46:18,836 INFO __main__: Выход из процесса по сигналу Ctrl+C
+2025-11-18 11:09:14,761 INFO __main__: Бот запущен
+2025-11-18 11:09:14,764 INFO __main__: Запуск polling...
+2025-11-18 11:09:28,557 INFO utils: OUT chat_id=1024281862 text='Ваши записи: выберите запись для действий или нажмите Назад.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D3C3CB0>}
+2025-11-18 11:09:42,286 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:09:42,291 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 11:09:42,292 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314C97D910>}
+2025-11-18 11:09:47,552 INFO utils: OUT chat_id=1024281862 text='Ваши записи: выберите запись для действий или нажмите Назад.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D3F8500>}
+2025-11-18 11:09:55,691 INFO utils: OUT chat_id=1024281862 text='Запись #3:\nФИО: Василенко Андрей иванович\nТелефон: 89027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 11:30\n' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D3C3CB0>}
+2025-11-18 11:10:06,931 INFO reminders: Удалена запись row=3
+2025-11-18 11:10:06,931 INFO utils: OUT chat_id=1024281862 text='Запись отменена.' extras={}
+2025-11-18 11:10:07,070 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:10:07,085 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 11:10:07,085 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D3DC0E0>}
+2025-11-18 11:10:17,651 INFO utils: OUT chat_id=1024281862 text='Ваши записи: выберите запись для действий или нажмите Назад.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D533770>}
+2025-11-18 11:10:22,416 INFO utils: OUT chat_id=1024281862 text='Запись #2:\nФИО: васильев Андрей димович\nТелефон: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 12:00\n' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314C9A0620>}
+2025-11-18 11:10:32,077 INFO reminders: Удалена запись row=2
+2025-11-18 11:10:32,077 INFO utils: OUT chat_id=1024281862 text='Запись отменена.' extras={}
+2025-11-18 11:10:32,658 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:10:32,667 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314C97DA30>}
+2025-11-18 11:10:38,618 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Записаться' contact=None
+2025-11-18 11:10:38,619 INFO utils: OUT chat_id=1024281862 text='Введите ФИО:' extras={reply_markup=<telebot.types.ReplyKeyboardRemove object at 0x000002314D3C2CC0>}
+2025-11-18 11:10:53,131 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='тестов тест тестович' contact=None
+2025-11-18 11:10:53,131 INFO utils: OUT chat_id=1024281862 text='Пожалуйста, отправьте свой номер телефона кнопкой ниже или введите его вручную:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D636C00>}
+2025-11-18 11:10:57,949 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text=None contact={'phone_number': '79027041329', 'first_name': 'Иван', 'last_name': 'Юрьев', 'user_id': 1024281862, 'vcard': None}
+2025-11-18 11:10:57,956 INFO utils: OUT chat_id=1024281862 text='Выберите тип массажа:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D57BFB0>}
+2025-11-18 11:11:00,594 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Массаж шеи (1 ед)' contact=None
+2025-11-18 11:11:00,595 INFO utils: OUT chat_id=1024281862 text='Выберите дату:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D64ACC0>}
+2025-11-18 11:11:05,222 INFO utils: Чтение db.xlsx для поиска занятых времён на дату=18.11.2025
+2025-11-18 11:11:05,225 INFO utils: Найдено забронированных времён для 18.11.2025: 0
+2025-11-18 11:11:05,226 INFO utils: OUT chat_id=1024281862 text='Выберите время:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D663D10>}
+2025-11-18 11:11:08,208 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='11:30' contact=None
+2025-11-18 11:11:08,208 INFO utils: OUT chat_id=1024281862 text='Подтвердите запись:\n\nФИО: тестов тест тестович\nНомер телефона: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 11:30' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D57BFB0>}
+2025-11-18 11:11:11,721 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Да' contact=None
+2025-11-18 11:11:11,727 INFO reg_mas: Запись в db.xlsx: chat_id=1024281862 fio=тестов тест тестович phone=79027041329 type=Массаж шеи (1 ед) date=18.11.2025 time=11:30
+2025-11-18 11:11:11,749 INFO utils: OUT chat_id=1024281862 text="Новая запись на массаж:\n\nПациент: <a href='tg://user?id=1024281862'>тестов тест тестович</a>\nНомер телефона: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 11:30" extras={parse_mode=HTML}
+2025-11-18 11:11:11,990 INFO utils: OUT chat_id=1024281862 text='Запись сохранена. Ждем вас!' extras={reply_markup=<telebot.types.ReplyKeyboardRemove object at 0x000002314C6C6B10>}
+2025-11-18 11:11:12,159 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:11:12,174 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 11:11:12,174 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D3F21E0>}
+2025-11-18 11:11:27,542 INFO utils: OUT chat_id=1024281862 text='Ваши записи: выберите запись для действий или нажмите Назад.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D57BFB0>}
+2025-11-18 11:11:37,542 INFO utils: OUT chat_id=1024281862 text='Запись #2:\nФИО: тестов тест тестович\nТелефон: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 11:30\n' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314C97DA30>}
+2025-11-18 11:11:41,896 INFO utils: OUT chat_id=1024281862 text='Выберите дату:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D439AC0>}
+2025-11-18 11:11:46,993 INFO utils: Чтение db.xlsx для поиска занятых времён на дату=19.11.2025
+2025-11-18 11:11:46,999 INFO utils: Найдено забронированных времён для 19.11.2025: 0
+2025-11-18 11:11:46,999 INFO utils: OUT chat_id=1024281862 text='Выберите время:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D5D5370>}
+2025-11-18 11:11:49,963 INFO reminders: Попытка перенести запись row=2 chat_id=1024281862 11:30 None -> 19.11.2025 09:00
+2025-11-18 11:11:49,984 INFO reminders: Обновление выполнено по row=2: 18.11.2025 11:30 -> 19.11.2025 09:00
+2025-11-18 11:11:50,000 INFO utils: OUT chat_id=1024281862 text='Ваша запись перенесена.' extras={}
+2025-11-18 11:11:50,240 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:11:50,240 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 11:11:50,240 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314DB63530>}
+2025-11-18 11:11:59,801 INFO utils: OUT chat_id=1024281862 text='Ваши записи: выберите запись для действий или нажмите Назад.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D48B380>}
+2025-11-18 11:12:37,198 INFO utils: OUT chat_id=1024281862 text='Запись #2:\nФИО: тестов тест тестович\nТелефон: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 19.11.2025\nВремя: 09:00\n' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D3FA0F0>}
+2025-11-18 11:12:41,475 INFO utils: OUT chat_id=1024281862 text='Выберите дату:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314A75E6F0>}
+2025-11-18 11:12:44,039 INFO utils: Чтение db.xlsx для поиска занятых времён на дату=18.11.2025
+2025-11-18 11:12:44,045 INFO utils: Найдено забронированных времён для 18.11.2025: 0
+2025-11-18 11:12:44,046 INFO utils: OUT chat_id=1024281862 text='Выберите время:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314C6C6B10>}
+2025-11-18 11:12:49,767 INFO reminders: Попытка перенести запись row=2 chat_id=1024281862 09:00 None -> 18.11.2025 11:30
+2025-11-18 11:12:49,780 INFO reminders: Обновление выполнено по row=2: 19.11.2025 09:00 -> 18.11.2025 11:30
+2025-11-18 11:12:49,796 INFO utils: OUT chat_id=1024281862 text='Ваша запись перенесена.' extras={}
+2025-11-18 11:12:50,481 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:12:50,486 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 11:12:50,486 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002314D43B740>}
+2025-11-18 11:13:10,040 INFO __main__: Остановка бота (Ctrl+C)...
+2025-11-18 11:13:10,040 INFO __main__: Выход из процесса по сигналу Ctrl+C
+2025-11-18 11:38:54,929 INFO __main__: Бот запущен
+2025-11-18 11:38:54,931 INFO __main__: Запуск polling...
+2025-11-18 11:39:04,357 INFO utils: OUT chat_id=1024281862 text='Ваши записи: выберите запись для действий или нажмите Назад.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AF80FE6F0>}
+2025-11-18 11:39:11,937 INFO utils: OUT chat_id=1024281862 text='Запись #2:\nФИО: тестов тест тестович\nТелефон: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 11:30\n' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFAE408C0>}
+2025-11-18 11:39:17,384 INFO reminders: Удалена запись row=2
+2025-11-18 11:39:17,399 INFO utils: OUT chat_id=1024281862 text='Запись отменена.' extras={}
+2025-11-18 11:39:17,565 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:39:17,567 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFB032480>}
+2025-11-18 11:39:47,268 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Записаться' contact=None
+2025-11-18 11:39:47,268 INFO utils: OUT chat_id=1024281862 text='Введите ФИО:' extras={reply_markup=<telebot.types.ReplyKeyboardRemove object at 0x0000026AFAE2C6B0>}
+2025-11-18 11:39:55,014 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='тестов тест тестович' contact=None
+2025-11-18 11:39:55,014 INFO utils: OUT chat_id=1024281862 text='Пожалуйста, отправьте свой номер телефона кнопкой ниже или введите его вручную:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFAF0C350>}
+2025-11-18 11:39:59,545 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text=None contact={'phone_number': '79027041329', 'first_name': 'Иван', 'last_name': 'Юрьев', 'user_id': 1024281862, 'vcard': None}
+2025-11-18 11:39:59,552 INFO utils: OUT chat_id=1024281862 text='Выберите тип массажа:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFAE13860>}
+2025-11-18 11:40:05,187 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Массаж шеи (1 ед)' contact=None
+2025-11-18 11:40:05,187 INFO utils: OUT chat_id=1024281862 text='Выберите дату:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AF797B4D0>}
+2025-11-18 11:40:08,430 INFO utils: Чтение db.xlsx для поиска занятых времён на дату=18.11.2025
+2025-11-18 11:40:08,434 INFO utils: Найдено забронированных времён для 18.11.2025: 0
+2025-11-18 11:40:08,435 INFO utils: OUT chat_id=1024281862 text='Выберите время:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFA3CD910>}
+2025-11-18 11:40:12,164 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='12:00' contact=None
+2025-11-18 11:40:12,164 INFO utils: OUT chat_id=1024281862 text='Подтвердите запись:\n\nФИО: тестов тест тестович\nНомер телефона: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 12:00' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFA1D1A60>}
+2025-11-18 11:40:15,621 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Да' contact=None
+2025-11-18 11:40:15,621 INFO utils: OUT chat_id=1024281862 text='За сколько напомнить о процедуре?' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFB063590>}
+2025-11-18 11:40:24,036 INFO reg_mas: Запись в db.xlsx: chat_id=1024281862 fio=тестов тест тестович phone=79027041329 type=Массаж шеи (1 ед) date=18.11.2025 time=12:00 remind_before=5
+2025-11-18 11:40:24,065 INFO utils: OUT chat_id=1024281862 text="Новая запись на массаж:\n\nПациент: <a href='tg://user?id=1024281862'>тестов тест тестович</a>\nНомер телефона: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 12:00" extras={parse_mode=HTML}
+2025-11-18 11:40:24,327 INFO utils: OUT chat_id=1024281862 text='Запись сохранена. Ждем вас!' extras={reply_markup=<telebot.types.ReplyKeyboardRemove object at 0x0000026AFA116B10>}
+2025-11-18 11:40:24,530 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:40:24,545 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 11:40:24,545 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFAFB7AA0>}
+2025-11-18 11:40:43,499 INFO utils: OUT chat_id=1024281862 text='Ваши записи: выберите запись для действий или нажмите Назад.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFAE34290>}
+2025-11-18 11:40:55,158 INFO utils: OUT chat_id=1024281862 text='Запись #2:\nФИО: тестов тест тестович\nТелефон: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 12:00\n' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AF797B4D0>}
+2025-11-18 11:41:19,426 INFO utils: OUT chat_id=1024281862 text='Выберите дату:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFAF0E180>}
+2025-11-18 11:41:22,489 INFO utils: Чтение db.xlsx для поиска занятых времён на дату=18.11.2025
+2025-11-18 11:41:22,494 INFO utils: Найдено забронированных времён для 18.11.2025: 1
+2025-11-18 11:41:22,494 INFO utils: OUT chat_id=1024281862 text='Выберите время:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFAE34290>}
+2025-11-18 11:41:25,774 INFO reminders: Попытка перенести запись row=2 chat_id=1024281862 12:00 None -> 18.11.2025 12:30
+2025-11-18 11:41:25,802 INFO reminders: Обновление выполнено по row=2: 18.11.2025 12:00 -> 18.11.2025 12:30 (remind_before=5)
+2025-11-18 11:41:25,802 ERROR reminders: Не удалось перепланировать напоминание после update_appointment_by_row
+Traceback (most recent call last):
+  File "D:\projects\git_rep\massage_bot\reminders.py", line 443, in update_appointment_by_row
+    schedule_reminder(chat_cell, fio, new_date, new_time, remind_before)
+                      ^^^^^^^^^
+NameError: name 'chat_cell' is not defined
+2025-11-18 11:41:25,829 INFO utils: OUT chat_id=1024281862 text='Ваша запись перенесена.' extras={}
+2025-11-18 11:41:26,308 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:41:26,313 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 11:41:26,313 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFAE48B60>}
+2025-11-18 11:41:57,232 INFO utils: OUT chat_id=1024281862 text='Ваши записи: выберите запись для действий или нажмите Назад.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFAE4A210>}
+2025-11-18 11:42:00,624 INFO utils: OUT chat_id=1024281862 text='Запись #2:\nФИО: тестов тест тестович\nТелефон: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 12:30\n' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFAF0E180>}
+2025-11-18 11:42:04,287 INFO utils: OUT chat_id=1024281862 text='Выберите дату:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AF7D2D580>}
+2025-11-18 11:42:06,826 INFO utils: Чтение db.xlsx для поиска занятых времён на дату=18.11.2025
+2025-11-18 11:42:06,831 INFO utils: Найдено забронированных времён для 18.11.2025: 1
+2025-11-18 11:42:06,832 INFO utils: OUT chat_id=1024281862 text='Выберите время:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AF7D2D580>}
+2025-11-18 11:42:09,081 INFO reminders: Попытка перенести запись row=2 chat_id=1024281862 12:30 None -> 18.11.2025 12:00
+2025-11-18 11:42:09,096 INFO reminders: Обновление выполнено по row=2: 18.11.2025 12:30 -> 18.11.2025 12:00 (remind_before=5)
+2025-11-18 11:42:09,096 ERROR reminders: Не удалось перепланировать напоминание после update_appointment_by_row
+Traceback (most recent call last):
+  File "D:\projects\git_rep\massage_bot\reminders.py", line 443, in update_appointment_by_row
+    schedule_reminder(chat_cell, fio, new_date, new_time, remind_before)
+                      ^^^^^^^^^
+NameError: name 'chat_cell' is not defined
+2025-11-18 11:42:09,121 INFO utils: OUT chat_id=1024281862 text='Ваша запись перенесена.' extras={}
+2025-11-18 11:42:09,298 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:42:09,300 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 11:42:09,300 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000026AFB508C20>}
+2025-11-18 11:42:32,265 INFO __main__: Остановка бота (Ctrl+C)...
+2025-11-18 11:42:32,265 INFO __main__: Выход из процесса по сигналу Ctrl+C
+2025-11-18 11:50:55,943 INFO __main__: Бот запущен
+2025-11-18 11:50:55,945 INFO __main__: Запуск polling...
+2025-11-18 11:51:09,549 INFO utils: OUT chat_id=1024281862 text='Ваши записи: выберите запись для действий или нажмите Назад.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x00000210593EDAC0>}
+2025-11-18 11:51:19,608 INFO utils: OUT chat_id=1024281862 text='Запись #2:\nФИО: тестов тест тестович\nТелефон: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 12:00\n' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002105A0B8620>}
+2025-11-18 11:51:24,612 INFO reminders: Удалена запись row=2
+2025-11-18 11:51:24,614 INFO utils: OUT chat_id=1024281862 text="Пациент <a href='tg://user?id=1024281862'>тестов тест тестович</a> отменил визит на 18.11.2025 в 12:00.\nНомер телефона: 79027041329" extras={parse_mode=HTML}
+2025-11-18 11:51:24,810 INFO utils: OUT chat_id=1024281862 text='Запись отменена.' extras={}
+2025-11-18 11:51:25,004 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:51:25,026 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x00000210592A6930>}
+2025-11-18 11:51:45,080 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Записаться' contact=None
+2025-11-18 11:51:45,081 INFO utils: OUT chat_id=1024281862 text='Введите ФИО:' extras={reply_markup=<telebot.types.ReplyKeyboardRemove object at 0x000002105A0D6150>}
+2025-11-18 11:51:51,831 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='1 2 3' contact=None
+2025-11-18 11:51:51,833 INFO utils: OUT chat_id=1024281862 text='Пожалуйста, отправьте свой номер телефона кнопкой ниже или введите его вручную:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000021056D8D580>}
+2025-11-18 11:51:55,270 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text=None contact={'phone_number': '79027041329', 'first_name': 'Иван', 'last_name': 'Юрьев', 'user_id': 1024281862, 'vcard': None}
+2025-11-18 11:51:55,276 INFO utils: OUT chat_id=1024281862 text='Выберите тип массажа:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000021059E33C50>}
+2025-11-18 11:52:06,055 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Массаж кисти и предплечья (1 ед)' contact=None
+2025-11-18 11:52:06,056 INFO utils: OUT chat_id=1024281862 text='Выберите дату:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002105A00DB20>}
+2025-11-18 11:52:09,345 INFO utils: Чтение db.xlsx для поиска занятых времён на дату=18.11.2025
+2025-11-18 11:52:09,350 INFO utils: Найдено забронированных времён для 18.11.2025: 0
+2025-11-18 11:52:09,350 INFO utils: OUT chat_id=1024281862 text='Выберите время:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002105715E6F0>}
+2025-11-18 11:52:16,277 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='12:00' contact=None
+2025-11-18 11:52:16,277 INFO utils: OUT chat_id=1024281862 text='Подтвердите запись:\n\nФИО: 1 2 3\nНомер телефона: 79027041329\nТип массажа: Массаж кисти и предплечья (1 ед)\nДата: 18.11.2025\nВремя: 12:00' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002105A024260>}
+2025-11-18 11:52:20,913 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Да' contact=None
+2025-11-18 11:52:20,913 INFO utils: OUT chat_id=1024281862 text='За сколько напомнить о процедуре?' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002105A1099D0>}
+2025-11-18 11:52:26,668 INFO reg_mas: Запись в db.xlsx: chat_id=1024281862 fio=1 2 3 phone=79027041329 type=Массаж кисти и предплечья (1 ед) date=18.11.2025 time=12:00 remind_before=5
+2025-11-18 11:52:26,692 INFO utils: OUT chat_id=1024281862 text="Новая запись на массаж:\n\nПациент: <a href='tg://user?id=1024281862'>1 2 3</a>\nНомер телефона: 79027041329\nТип массажа: Массаж кисти и предплечья (1 ед)\nДата: 18.11.2025\nВремя: 12:00" extras={parse_mode=HTML}
+2025-11-18 11:52:26,855 INFO utils: OUT chat_id=1024281862 text='Запись сохранена. Ждем вас!' extras={reply_markup=<telebot.types.ReplyKeyboardRemove object at 0x0000021056DC7770>}
+2025-11-18 11:52:27,056 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:52:27,068 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 11:52:27,068 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000021059413A40>}
+2025-11-18 11:55:00,061 INFO utils: OUT chat_id=1024281862 text='Напоминание: Ваша процедура назначена на 18.11.2025 в 12:00.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002105A11C140>}
+2025-11-18 11:55:15,623 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Подтвердить посещение' contact=None
+2025-11-18 11:55:15,629 INFO utils: OUT chat_id=1024281862 text="Пациент <a href='tg://user?id=1024281862'>1 2 3</a> подтвердил визит на 18.11.2025 в 12:00.\nНомер телефона: 79027041329" extras={parse_mode=HTML}
+2025-11-18 11:55:15,810 INFO utils: OUT chat_id=1024281862 text='Спасибо, мы вас ждем!' extras={}
+2025-11-18 11:55:35,177 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:55:35,183 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 11:55:35,183 INFO utils: OUT chat_id=1024281862 text='Извините, я не понимаю ваш запрос. Выберите пункт из меню.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000021059182B40>}
+2025-11-18 11:55:35,183 INFO utils: OUT chat_id=1024281862 text='Извините, я не понимаю ваш запрос. Выберите пункт из меню.' extras={reply_to_message_id=2076, reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000021059182B40>}
+2025-11-18 11:55:41,722 INFO utils: OUT chat_id=1024281862 text='Ваши записи: выберите запись для действий или нажмите Назад.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000021059EE14C0>}
+2025-11-18 11:55:45,033 INFO utils: OUT chat_id=1024281862 text='Запись #2:\nФИО: 1 2 3\nТелефон: 79027041329\nТип массажа: Массаж кисти и предплечья (1 ед)\nДата: 18.11.2025\nВремя: 12:00\n' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000002105A024260>}
+2025-11-18 11:55:51,258 INFO reminders: Удалена запись row=2
+2025-11-18 11:55:51,258 INFO utils: OUT chat_id=1024281862 text="Пациент <a href='tg://user?id=1024281862'>1 2 3</a> отменил визит на 18.11.2025 в 12:00.\nНомер телефона: 79027041329" extras={parse_mode=HTML}
+2025-11-18 11:55:51,417 INFO utils: OUT chat_id=1024281862 text='Запись отменена.' extras={}
+2025-11-18 11:55:51,547 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 11:55:51,565 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x0000021059E69370>}
+2025-11-18 11:56:29,761 INFO __main__: Остановка бота (Ctrl+C)...
+2025-11-18 11:56:29,761 INFO __main__: Выход из процесса по сигналу Ctrl+C
+2025-11-18 13:00:48,810 INFO __main__: Бот запущен
+2025-11-18 13:00:48,816 INFO __main__: Запуск polling...
+2025-11-18 13:02:22,398 INFO utils: OUT chat_id=1024281862 text='Вопросы, пожелания, предложения, проблемы можете направить разработчику на почту: yurjewivan@yandex.ru\nСпасибо за понимание.' extras={}
+2025-11-18 13:02:24,086 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 13:02:24,090 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F2E6420>}
+2025-11-18 13:02:36,679 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Записаться' contact=None
+2025-11-18 13:02:36,679 INFO utils: OUT chat_id=1024281862 text='Введите ФИО:' extras={reply_markup=<telebot.types.ReplyKeyboardRemove object at 0x000001F27F053A40>}
+2025-11-18 13:02:42,207 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='1 2 3' contact=None
+2025-11-18 13:02:42,207 INFO utils: OUT chat_id=1024281862 text='Пожалуйста, отправьте свой номер телефона кнопкой ниже или введите его вручную:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F023920>}
+2025-11-18 13:02:52,305 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text=None contact={'phone_number': '79027041329', 'first_name': 'Иван', 'last_name': 'Юрьев', 'user_id': 1024281862, 'vcard': None}
+2025-11-18 13:02:52,312 INFO utils: OUT chat_id=1024281862 text='Выберите тип массажа:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F03F980>}
+2025-11-18 13:02:55,474 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Массаж шеи (1 ед)' contact=None
+2025-11-18 13:02:55,474 INFO utils: OUT chat_id=1024281862 text='Выберите дату:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F058800>}
+2025-11-18 13:02:58,900 INFO utils: Чтение db.xlsx для поиска занятых времён на дату=18.11.2025
+2025-11-18 13:02:58,905 INFO utils: Найдено забронированных времён для 18.11.2025: 0
+2025-11-18 13:02:58,905 INFO utils: OUT chat_id=1024281862 text='Выберите время:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F2E73B0>}
+2025-11-18 13:03:02,073 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='13:30' contact=None
+2025-11-18 13:03:02,073 INFO utils: OUT chat_id=1024281862 text='Подтвердите запись:\n\nФИО: 1 2 3\nНомер телефона: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 13:30' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F051280>}
+2025-11-18 13:03:05,144 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Да' contact=None
+2025-11-18 13:03:05,145 INFO utils: OUT chat_id=1024281862 text='За сколько напомнить о процедуре?' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F2E5AF0>}
+2025-11-18 13:03:22,557 INFO reg_mas: Запись в db.xlsx: chat_id=1024281862 fio=1 2 3 phone=79027041329 type=Массаж шеи (1 ед) date=18.11.2025 time=13:30 remind_before=5
+2025-11-18 13:03:22,605 INFO reminders: Запланировано одноразовое напоминание key=2 at 2025-11-18T13:25:00
+2025-11-18 13:03:22,605 INFO utils: OUT chat_id=1024281862 text="Новая запись на массаж:\n\nПациент: <a href='tg://user?id=1024281862'>1 2 3</a>\nНомер телефона: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 13:30" extras={parse_mode=HTML}
+2025-11-18 13:03:22,757 INFO utils: OUT chat_id=1024281862 text='Запись сохранена. Ждем вас!' extras={reply_markup=<telebot.types.ReplyKeyboardRemove object at 0x000001F27F21DAF0>}
+2025-11-18 13:03:22,869 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 13:03:22,872 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 13:03:22,872 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F2E7770>}
+2025-11-18 13:03:47,235 INFO utils: OUT chat_id=1024281862 text='Ваши записи: выберите запись для действий или нажмите Назад.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F254E60>}
+2025-11-18 13:03:52,776 INFO utils: OUT chat_id=1024281862 text='Запись #2:\nФИО: 1 2 3\nТелефон: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 13:30\n' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F254E60>}
+2025-11-18 13:03:57,475 INFO utils: OUT chat_id=1024281862 text='Выберите дату:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27EFAB170>}
+2025-11-18 13:04:01,538 INFO utils: Чтение db.xlsx для поиска занятых времён на дату=18.11.2025
+2025-11-18 13:04:01,545 INFO utils: Найдено забронированных времён для 18.11.2025: 1
+2025-11-18 13:04:01,546 INFO utils: OUT chat_id=1024281862 text='Выберите время:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F1FFD40>}
+2025-11-18 13:04:25,050 INFO reminders: Попытка перенести запись row=2 chat_id=1024281862 13:30 None -> 18.11.2025 13:11
+2025-11-18 13:04:25,078 INFO reminders: Обновление выполнено по row=2: 18.11.2025 13:30 -> 18.11.2025 13:11 (remind_before=5)
+2025-11-18 13:04:25,107 INFO reminders: Запланировано одноразовое напоминание key=2 at 2025-11-18T13:06:00
+2025-11-18 13:04:25,109 INFO utils: OUT chat_id=1024281862 text='Ваша запись перенесена.' extras={}
+2025-11-18 13:04:25,239 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 13:04:25,241 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 13:04:25,243 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27C267380>}
+2025-11-18 13:05:09,167 INFO utils: OUT chat_id=1024281862 text='Ваши записи: выберите запись для действий или нажмите Назад.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F306A20>}
+2025-11-18 13:05:19,571 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 13:05:19,580 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 13:05:19,581 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F048530>}
+2025-11-18 13:06:00,008 INFO utils: OUT chat_id=1024281862 text='Напоминание: Ваша процедура назначена на 18.11.2025 в 13:11.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F332060>}
+2025-11-18 13:21:46,230 INFO utils: IN  chat_id=1024281862 from=id=1024281862 name=Иван Юрьев username=R1BQE text='Подтвердить посещение' contact=None
+2025-11-18 13:21:46,236 INFO utils: OUT chat_id=1024281862 text="Пациент <a href='tg://user?id=1024281862'>1 2 3</a> подтвердил визит на 18.11.2025 в 13:11.\nНомер телефона: 79027041329" extras={parse_mode=HTML}
+2025-11-18 13:21:47,548 INFO utils: OUT chat_id=1024281862 text='Спасибо, мы вас ждем!' extras={reply_markup=<telebot.types.ReplyKeyboardRemove object at 0x000001F27F03DBE0>}
+2025-11-18 13:21:47,754 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 13:21:47,759 INFO keyboards: Найдена запись для chat_id=1024281862, добавляем кнопку 'Действия'
+2025-11-18 13:21:47,759 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F1FD070>}
+2025-11-18 13:22:03,376 INFO utils: OUT chat_id=1024281862 text='Ваши записи: выберите запись для действий или нажмите Назад.' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F2BB0B0>}
+2025-11-18 13:22:06,601 INFO utils: OUT chat_id=1024281862 text='Запись #2:\nФИО: 1 2 3\nТелефон: 79027041329\nТип массажа: Массаж шеи (1 ед)\nДата: 18.11.2025\nВремя: 13:11\n' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27E58A240>}
+2025-11-18 13:22:08,917 INFO reminders: Удалена запись row=2
+2025-11-18 13:22:08,917 INFO utils: OUT chat_id=1024281862 text="Пациент <a href='tg://user?id=1024281862'>1 2 3</a> отменил визит на 18.11.2025 в 13:11.\nНомер телефона: 79027041329" extras={parse_mode=HTML}
+2025-11-18 13:22:10,991 INFO utils: OUT chat_id=1024281862 text='Запись отменена.' extras={}
+2025-11-18 13:22:11,217 INFO keyboards: Чтение db.xlsx для проверки наличия записи chat_id=1024281862
+2025-11-18 13:22:11,236 INFO utils: OUT chat_id=1024281862 text='Выберите пункт из меню:' extras={reply_markup=<telebot.types.ReplyKeyboardMarkup object at 0x000001F27F7F2240>}
+2025-11-18 13:22:35,539 INFO __main__: Остановка бота (Ctrl+C)...
+2025-11-18 13:22:35,539 INFO __main__: Выход из процесса по сигналу Ctrl+C
